@@ -4,38 +4,44 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black-color: black;
+  --white-color: #bebebe;
+  --border-color-black: 1px solid black;
+}
+
 html {
   font-size: 62.5%;
 }
 
-.parent {
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#one {
+#boxOne {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
-  background-color: red;
+  position: absolute;
   width: 35rem;
   height: 100px;
-  position: absolute;
+  border-radius: 10px;
+  background-color: red;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
+  border: var(--border-color-black);
 }
 
-#two {
-  padding: 6rem;
+#boxTwo {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6rem;
   border-radius: 10px;
   background-color: #fff;
   width: 65rem;
@@ -43,5 +49,5 @@ html {
   top: 0;
   left: 0;
   text-align: left;
-  border: 1px solid black;
+  border: var(--border-color-black);
 }
